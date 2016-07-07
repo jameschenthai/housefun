@@ -1,0 +1,18 @@
+<% if(records&&records.length>0) {%>
+ 
+<% for(var i=0; i<records.length; i++) {%>
+    <li>
+        <div>
+            <p>  
+                <%= link_to(records[i].name, '../admin/item/'+ records[i].id +'/edit') %>
+                
+                <%= link_to('view', '../item/'+ records[i].id ) %>
+            </p>
+            <p>Price: <%= records[i].minPrice %> ~ <%= records[i].maxPrice %></p>
+            <p>Floor: <%= records[i].floor %>/<%= records[i].totalFloor %></p>
+        </div>
+    </li>
+<% } %>
+ 
+
+<% } %>

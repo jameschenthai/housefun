@@ -1,0 +1,53 @@
+<%- include('.././layout/header', {title:'search'}); %>
+<body>
+<%- include('.././layout/nav', {nav : 'search'}); %>
+    
+
+<body>
+<h1>Search</h1>
+    
+    <div><a href="/search">Province</a> / <a href="/bts">BTS/MRT</a> </div>
+    
+    
+<table style='vertical-align:text-top;'>
+    <tr>
+        <td style='height:500px;width:400px;' valign="top">
+            <div>Price:<input type='text' id='minPrice'>~<br/>
+                <input type='text' id='maxPrice'></div>
+        </td>
+        <td style='height:500px;' valign="top">
+            <table>
+                <tr>
+                    <td colspan="3">BTS:
+                        <select id="locationId"> 
+                        </select>
+                    </td>
+                    <td>
+                        <input type="button" onclick="search();" value="<%= t('link.search')%>" class="search-btn">
+                    </td>                
+                </tr> 
+                
+            </table>
+            <div id="rooms"></div>
+            <div id="resultCountDIV">共<span id="resultCount"></span>筆</div>
+            <div id="searchMsg"></div>
+            <div id="loadMoreSerchLink" ><a href="javascript:void(0);" onclick="javascript:loadMoreSerch();">Load more</a></div>
+    
+        </td>
+    </tr>
+</table>
+     
+    
+<%- include('.././layout/footer',{footer:'search'}); %>
+<script>
+$( document ).ready(function() {
+    $('#loadMoreSerchLink').hide();
+    $('#resultCountDIV').hide();
+    initBTS(null);
+});
+</script>
+    
+</body>
+</html>
+
+

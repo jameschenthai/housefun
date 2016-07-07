@@ -1,0 +1,44 @@
+<%- include('.././layout/header', {title:(item&&item.nameThai?item.nameThai:'item detail')}); %>
+<body>
+<%- include('.././layout/nav', {nav : ''}); %>
+   
+<h1>Item</h1> 
+<% if(item){%>
+   nameThai: <%= item.nameThai%><br/>
+   nameEnglish: <%= item.nameEnglish%><br/>
+   nameChinese: <%= item.nameChinese%><br/>
+   Price: <%= item.minPrice%> ~  <%= item.maxPrice%> <%= item.dollar%><br/>
+    
+    spaceSize: <%= item.spaceSize%><br/>
+    houseType:<%= item.houseType%><br/>
+    rentType:<%= item.rentType%><br/>
+    floor <%= item.floor%> / <%= item.totalFloor%><br/>
+    locationId:<%= item.locationId%><br/>
+    provinceId:<%= item.provinceId%><br/>
+    cityId:<%= item.cityId%><br/>
+    address:<%= item.address%><br/>
+    rentLimit:<%= item.rentLimit%><br/>
+    updatedAt:<%= item.updatedAt%><br/>
+
+    <table>
+   <% for(var i=0;i<itemUnits.length;i++){%>
+        <tr>
+            <td><%= itemUnits[i].name%></td>
+            <td>houseType<%= itemUnits[i].houseType%></td>
+            <td>roomQuantity<%= itemUnits[i].roomQuantity%></td>
+            <td>monthlyPrice:<%= itemUnits[i].monthlyMinPrice%> ~ <%= itemUnits[i].monthlyMinPrice%> </td>
+            <td>dailyPrice: <%= itemUnits[i].dailyMinPrice%> ~ <%= itemUnits[i].daillyMaxPrice%> </td>
+            <td>spaceSize:<%= itemUnits[i].spaceSize%></td>  
+            <td>floor:<%= itemUnits[i].floor%></td>
+            <td>rentLimit:<%= itemUnits[i].rentLimit%></td>
+           
+        </tr>
+   <% } %>
+   </table>
+  
+<% } %>    
+    
+    
+</body>
+<%- include('.././layout/footer',{footer:'items'}); %>
+   

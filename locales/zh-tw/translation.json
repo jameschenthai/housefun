@@ -1,0 +1,67 @@
+{
+     "link":{
+        "lang":" 中文",
+        "lang_english":"English",
+        "lang_thai":"ภาษาไทย",
+        "lang_chinese":"繁體中文",
+        "lang_chinese_simple":"简体中文",
+        "lang_change":"Chnage Language",
+
+        "aboutUs":"關於我們",
+        "contactUs":"聯繫我們",
+         
+        "login":"登入",
+        "logout":"登出",
+        "signup":"註冊",
+
+        "search":"搜尋",
+        "submit":"送出",
+        "save":"儲存",
+        "update":"更新",
+        "forgetPassword":"忘記密碼",
+        "fbLogin":"FaceBook登入"
+     },
+     "title":{
+        "userName":"姓名",
+        "eMail":"Email address",       
+        "password":"密碼",
+        "confirmPassword":"確認密碼",
+        "remberMe":"兩週內免登入",
+        "price":"價錢",  
+        "floor":"樓層", 
+        "province":"府/省",
+        "city":"縣市",
+        "mobilePhoneNumber":"手機號碼",
+        "houseType":"類型",
+        "houseType_1":"雅房",
+        "houseType_2":"分租套房",
+        "houseType_3":"獨立套房 apartment",
+        "houseType_4":"獨立套房 condo",
+        "houseType_11":"獨棟",
+        "houseType_21":"獨棟",    
+        "houseType_22":"獨棟"
+    },
+  
+    "msg":{
+        "login":{
+            "fail_01":"帳號或密碼不正確"
+        },
+        "email":{
+            "exist":"E-mail已被使用",
+            "not_exist":"E-mail不存在",
+            "validate_result_0":"E-Mail驗證失敗",
+            "validate_result_1":"E-Mail通過驗證",
+            "send_forget_password":"已寄出密碼通知信"
+        }
+    },
+    "email":{
+        "singup":{
+            "subject":"註冊通知信",
+            "content":"hello <p>welcome join HouseFub.asia</p><p>#emailvalidatUrl#</p><a href='#emailvalidatUrl#'>#emailvalidatUrl#</a>"
+        },
+        "forgetPassword":{
+            "subject":"忘記密碼通知信",
+            "content":"您好,您的密碼為:#password#"
+        }
+    }
+}

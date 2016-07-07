@@ -1,0 +1,72 @@
+{
+    "link":{
+        "lang":"ภาษาไทย",
+
+        "lang_english":"English",
+        "lang_thai":"ภาษาไทย",
+        "lang_chinese":"繁體中文",
+        "lang_chinese_simple":"简体中文",
+        "lang_change":"Chnage Language",
+        "aboutUs":"About Us",
+        "contactUs":"Contact Us",
+        "login":"ลงชื่อเข้าใช้",
+        "logout":"Logout",
+        "signup":"สมัครสมาชิก",
+
+        "search":"ค้นหา",
+        "submit":"submit",
+        "save":"Save",
+        "update":"Update",
+        "forgetPassword":"Forget Password",
+        "fbLogin":"FaceBook"
+        
+    },      
+    "title":{
+        "userName":"User Name",
+        "eMail":"Email address", 
+        "password":"Password",
+        "confirmPassword":"Confirm Password",
+        "remberMe":"Rember Me",
+        "price":"ราคา",  
+        "floor":"ชั้น",
+        "province":"จังหวัด",
+        "city":"เมือง",
+        "mobilePhoneNumber":"Mobile Phone Number",
+        
+        "houseType":"ชนิด",
+        "houseType_1":"th-雅房",
+        "houseType_2":"th-分租套房",
+        "houseType_3":"th-獨立apartment",
+        "houseType_4":"th-獨立condo",
+        "houseType_11":"th-獨棟",
+        "houseType_21":"th-獨棟",    
+        "houseType_22":"th-獨棟"
+    },
+    "msg":{ 
+        "login":{
+            "fail_01":"email or password is not correct"
+        },
+        "singup":{
+            "success":"註冊帳號成功",
+            "fail_01":"註冊帳號失敗",
+            "fail_02":"註冊帳號失敗:E-mail已被使用"
+        },
+        "email":{
+            "exist":"E-mail已被使用",
+            "not_exist":"E-mail不存在",
+            "validate_result_0":"E-Mail驗證失敗",
+            "validate_result_1":"E-Mail通過驗證",
+            "send_forget_password":"已寄出密碼通知信"
+        }
+    },
+    "email":{
+        "singup":{
+            "subject":"註冊通知信",
+            "content":"hello <p>welcome join HouseFub.asia</p><p>#emailvalidatUrl#</p><a href='#emailvalidatUrl#'>#emailvalidatUrl#</a>"
+        },
+        "forgetPassword":{
+            "subject":"忘記密碼通知信",
+            "content":"您好,您的密碼為:#password#"
+        }
+    }
+}

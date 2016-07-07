@@ -1,0 +1,44 @@
+<%- include('.././layout/header', {title:'Sing Up'}); %>
+<body>
+<%- include('.././layout/nav', {nav : 'singup'}); %>
+     
+    
+<div class="container">
+      <div><a href="/auth/facebook">Sing Up with Facebook</a></div>
+
+      <form class="form-signin" id="dataForm"  method="post">
+        <h2 class="form-signin-heading">Please sign Up</h2>
+          
+        <label for="inputEmail" class="sr-only"><%= t('title.eMail')%></label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="<%= t('title.eMail')%>" required autofocus>
+          
+        <label for="inputUserName" class="sr-only"><%= t('title.userName')%></label>
+        <input id="username" name="username" class="form-control" placeholder="<%= t('title.userName')%>" required autofocus>
+
+        <label for="inputPassword" class="sr-only"><%= t('title.password')%></label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="<%= t('title.password')%>" required>
+          
+        <label for="inputPassword" class="sr-only"><%= t('title.confirmPassword')%></label>
+        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="<%= t('title.confirmPassword')%>" required>
+   
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><%= t('link.signup')%></button>
+        <div><span id="msg_action"></span></div>
+      </form> 
+</div> 
+     
+  
+<%- include('.././layout/footer',{footer : ''}); %>
+    
+<script> 
+$(document).ready(function() {
+    signup();
+    isEmailExist();
+}); 
+</script>
+    
+</body>
+</html>
+
+
+   
+

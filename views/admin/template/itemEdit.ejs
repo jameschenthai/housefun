@@ -1,0 +1,175 @@
+    <input type="hidden" id="id" value="<%= item.id %>"/>
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Title</label> 
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Input name" id="nameThai" name='nameThai' value="<%= item.nameThai %>">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="nameEnglish" class="col-sm-2 control-label">name English</label> 
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Input name" id="nameEnglish" name='nameEnglish' value="<%= item.nameEnglish %>">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="nameChinese" class="col-sm-2 control-label">name Chinese</label> 
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Input name" id="nameChinese" name='nameChinese' value="<%= item.nameChinese %>">
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <label for="nameChinese" class="col-sm-2 control-label">Price</label> 
+       
+          <div class="input-group col-sm-2">
+             <span class="input-group-addon">$</span>
+              <input type="text" class="form-control" placeholder="Input minPrice" id="minPrice" name='minPrice' value="<%= item.minPrice %>">
+          </div>
+
+          <div class="input-group col-sm-2">
+             <span class="input-group-addon">$</span>
+             <input type="text" class="form-control" placeholder="Input maxPrice" id="maxPrice" name='maxPrice' value="<%= item.maxPrice %>">
+         </div> 
+            
+        
+    </div>
+        
+ 
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">rentType</label> 
+        <div class="col-sm-10">
+             <input type="text" class="form-control" placeholder="Input" id="spaceSize" name='spaceSize' value="<%= item.spaceSize %>">
+        </div>
+    </div>
+        
+ 
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">rentType</label> 
+        <div class="col-sm-10">
+             <input type="text" class="form-control" placeholder="Input" id="houseType" name='houseType' value="<%= item.houseType %>">
+        </div>
+    </div>
+
+
+     <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">rentType</label> 
+        <div class="col-sm-10">
+             <input type="text" class="form-control" placeholder="Input" id="rentType" name='rentType' value="<%= item.rentType %>">
+        </div>
+    </div>     
+ 
+     <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">floor/totalFloor</label> 
+        <div class="col-sm-3">
+             <input type="text" class="form-control" placeholder="Input" id="floor" name='floor' value="<%= item.floor %>"> 
+        </div>
+         
+         <div class="col-sm-1"> /  </div>
+         <div class="col-sm-1"> /  </div>
+        <div class="col-sm-3"> 
+            <input type="text" class="form-control" placeholder="Input" id="totalFloor" name='totalFloor' value="<%= item.totalFloor %>">
+        </div>
+    </div>   
+
+
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">Location</label> 
+        <div class="col-sm-10">
+            <select id="locationId" name="locationId"></select> 
+        </div>
+    </div>   
+
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">provinceId</label> 
+        <div class="col-sm-10">
+            <select id="provinceId" name="provinceId"></select> 
+        </div>
+    </div>          
+         
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">cityId</label> 
+        <div class="col-sm-10">
+            <select id="cityId" name="cityId"></select>  
+        </div>
+    </div>   
+
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">address</label> 
+        <div class="col-sm-10">
+             <input type="text" class="form-control" placeholder="Input" id="address" name='address' value="<%= item.address %>">
+        </div>
+    </div>   
+
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">rentLimit</label> 
+        <div class="col-sm-10">
+             <input type="text" class="form-control" placeholder="Input" id="rentLimit" name='rentLimit' value="<%= item.rentLimit %>">
+        </div>
+    </div>        
+        
+    <div class="form-group">
+        <label for="rentType" class="col-sm-2 control-label">status</label> 
+        <div class="col-sm-10">
+             <input type="text" class="form-control" placeholder="Input" id="status" name='status' value="<%= item.status %>">
+        </div>
+    </div> 
+
+ <div class="table-responsive">
+        <table id="itemUnits" class="table table-striped">
+            <thead>
+               <tr>
+                    <th>Name</th> 
+                    <th>itemUnit_monthlyMinPrice</th> 
+                    <th>itemUnit_dailyMinPrice</th> 
+                    <th>itemUnit_spaceSize</th> 
+                    <th>itemUnit_houseType</th>
+                </tr>   
+            <thead>
+            <tbody>
+            <% for(var j=0;j<itemUnits.length;j++){%>
+                <tr> 
+                    <td>
+                        <input type="hidden" id="itemUnit_id" name='itemUnit_id' value="<%= itemUnits[j].id %>"/> 
+                        <input type="text" id="itemUnit_name" name='itemUnit_name' value="<%= itemUnits[j].name %>"/>
+                    </td> 
+                    <td>
+                        <input type="text" id="itemUnit_monthlyMinPrice" name='itemUnit_monthlyMinPrice' class="itemUnit_input" value="<%= itemUnits[j].monthlyMinPrice %>"/>~
+                        <br/>
+                        <input type="text" id="itemUnit_monthlyMaxPrice" name='itemUnit_monthlyMaxPrice' class="itemUnit_input" value="<%= itemUnits[j].monthlyMaxPrice %>"/>
+                    </td> 
+                    <td>
+                        <input type="text" id="itemUnit_dailyMinPrice" name='itemUnit_dailyMinPrice' class="itemUnit_input" value="<%= itemUnits[j].dailyMinPrice %>"/>
+                        ~<br/>
+                        <input type="text" id="itemUnit_daillyMaxPrice" name='itemUnit_daillyMaxPrice' class="itemUnit_input" value="<%= itemUnits[j].daillyMaxPrice %>"/>
+                    </td> 
+                    <td><input type="text" id="itemUnit_spaceSize" name='itemUnit_spaceSize' class="itemUnit_input" value="<%= itemUnits[j].spaceSize %>"/></td> 
+                    <td><input type="text" id="itemUnit_houseType" name='itemUnit_houseType' class="itemUnit_input" value="<%= itemUnits[j].houseType %>"/></td>
+                    <td> 
+                         <select id="itemUnit_roomQuantity" name='itemUnit_roomQuantity'>
+                             <option value="1">1</option>
+                             <option value="2">2</option>
+                             <option value="3">3</option>
+                             <option value="4">4</option> 
+                         </select>
+                    </td>
+                    <td><input type="text" id="itemUnit_floor" name='itemUnit_floor' class="itemUnit_input" value="<%= itemUnits[j].floor %>"/></td>
+                    <td><input type="text" id="itemUnit_rentLimit" name='itemUnit_rentLimit' class="itemUnit_input" value="<%= itemUnits[j].rentLimit %>"/></td>
+                    <td><input type="text" id="itemUnit_status" name='itemUnit_status' class="itemUnit_input" value="<%= itemUnits[j].status %>"/></td>
+                    
+                    
+                </tr>  
+            <% } %>
+            </tbody>
+        </table>
+    </div> 
+        <a href="javascript:addItemUnit();">add Unit</a>
+    
+        <div>
+            <input type="submit" value="<%= item&&item.id ?  'Update':'Save' %>"/>
+            <span id="msg_action"></span>
+        </div>
+
+
+    

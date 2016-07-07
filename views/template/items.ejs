@@ -1,0 +1,18 @@
+ 
+<% for(var i=0; i<records.length; i++) {%>
+    <li>
+  
+        <div>
+            <p> 
+                <%= link_to(records[i].name, './item/'+ records[i].id ) %>
+            </p>
+            <p>Price: <%= records[i].minPrice %> ~ <%= records[i].maxPrice %></p>
+            <p>Floor: <%= records[i].floor %>/<%= records[i].totalFloor %></p>
+        </div>
+    </li>
+<% } %>
+    
+  
+<% if(records.length==0){%>
+    <div>No Data </div>
+<% } %>  

@@ -1,0 +1,63 @@
+ 
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <span class="brand visible-xs-block">THREE DAYS GRACE</span>
+          </div>
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              
+              <li class="home <%= nav&&nav=='index'?'active':'' %>"><a href="/">Home</a></li>
+              <li class="news"><a href="/search"><%= t('link.search')%></a></li>
+              <li class="community"><a href="/admin/items">My Item</a></li>
+              
+              <li><a target="_blank" href="https://threedaysgrace.fancorps.com/signup/">Street Team</a></li>
+              <li><a href="http://smarturl.it/threedaysgraceshop ">Shop</a></li>
+            </ul>
+              
+               
+            
+              
+            <ul class="nav navbar-nav navbar-right"> 
+             
+                
+                <% if(user){%>
+        <li><a href="/admin/profile"><%= user.name %></a></li> 
+        <li class="<%= nav&&nav=='login'?'active':'' %>"><a href="/logout"><%= t('link.logout')%></a></li> 
+<% }else{ %>
+       
+        <li class="<%= nav&&nav=='reguest'?'active':'' %>"><a href="/signup"><%= t('link.signup')%></a> </li>
+        <li class="<%= nav&&nav=='logout'?'active':'' %>"><a href="/login"><%= t('link.login')%></a></li>
+<% } %>
+                
+            <li class="languages dropdown navbar">
+                <a href="#" data-target="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <i class="fa fa-globe"></i><%= t('link.lang_change')%>				
+                    <b class="caret"></b>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-box" role="menu" aria-labelledby="dropdownMenu1" id='menu_houseType'>
+                   <li role="presentation"><a href="javascript:changeLan('en')"><%= t('link.lang_english')%></a></li>
+                   <li role="presentation"><a href="javascript:changeLan('th');"><%= t('link.lang_thai')%></a></li>
+                   <li role="presentation"><a href="javascript:changeLan('zh-tw');"><%= t('link.lang_chinese')%></a></li>
+                  <li role="presentation"><a href="javascript:changeLan('zh-hans');"><%= t('link.lang_chinese_simple')%></a></li> 
+                </ul>
+
+             </li>                 
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+ 

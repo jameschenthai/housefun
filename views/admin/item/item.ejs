@@ -1,0 +1,63 @@
+<%- include('../layout/header', {title:'Rooms'}); %>
+<body>
+<%- include('.././layout/nav', {nav : 'item'}); %>
+<h1>Item</h1> 
+      
+            <div id="def_itemUnit" class='hide'>
+                <table>
+                    <tr> 
+                                <td>
+                                    <input type="hidden" id="itemUnit_id" name='itemUnit_id' value=""/> 
+                                    <input type="text" id="itemUnit_name" name='itemUnit_name' value=""/>
+                                </td> 
+                                <td>
+                                    <input type="text" id="itemUnit_monthlyMinPrice" name='itemUnit_monthlyMinPrice' class="itemUnit_input" value=""/>~
+                                    <br/>
+                                    <input type="text" id="itemUnit_monthlyMaxPrice" name='itemUnit_monthlyMaxPrice' class="itemUnit_input" value=""/>
+                                </td> 
+                                <td>
+                                    <input type="text" id="itemUnit_dailyMinPrice" name='itemUnit_dailyMinPrice' class="itemUnit_input" value=""/>
+                                    ~<br/>
+                                    <input type="text" id="itemUnit_daillyMaxPrice" name='itemUnit_daillyMaxPrice' class="itemUnit_input" value=""/>
+                                </td> 
+                                <td><input type="text" id="itemUnit_spaceSize" name='itemUnit_spaceSize' class="itemUnit_input" value=""/></td> 
+                                <td><input type="text" id="itemUnit_houseType" name='itemUnit_houseType' class="itemUnit_input" value=""/></td>
+                                <td> 
+                                  
+                               
+
+                                    <select class="selectpicker" data-live-search="true" id="itemUnit_roomQuantity" name='itemUnit_roomQuantity'>
+                                        <option data-tokens="1">1</option>
+                                        <option data-tokens="2">2</option>
+                                        <option data-tokens="3">3</option>
+                                        <option data-tokens="3">4</option>
+                                    </select>
+
+                                    
+                                    
+                                </td>
+                                <td><input type="text" id="itemUnit_floor" name='itemUnit_floor' value=""/></td>
+                                <td><input type="text" id="itemUnit_rentLimit" name='itemUnit_rentLimit' value=""/></td>  
+                            </tr>    
+                </table>
+            </div>
+
+     
+          <form role="form" id="dataForm" method="post" class="form-horizontal"> 
+          </form>  
+           
+</body>
+ 
+<%- include('.././layout/footer'); %>
+ 
+<script> 
+$(document).ready(function() {
+ 
+    item_edit_init('<%= id %>');
+    item_edit_formSubmit('<%= id %>');
+                   
+    item_edit_addItemUnit(); 
+
+}); 
+</script>
+   

@@ -1,0 +1,31 @@
+<%- include('.././layout/header', {title:'login'}); %>
+<body>
+<%- include('.././layout/nav', {nav : 'login'}); %>
+   
+    
+<div class="container">
+      
+
+      <form class="form-signin" action="/login" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only"><%= t('title.eMail')%></label>
+        <input type="email" id="username" name="username" class="form-control" placeholder="<%= t('title.eMail')%>" required autofocus>
+        <div class="msg_error"><%=msg%></div>
+        <label for="inputPassword" class="sr-only"><%= t('title.password')%></label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="<%= t('title.password')%>" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"><%= t('title.remberMe')%> 
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><%= t('link.login')%></button>
+          <div><a href="/auth/facebook"><%= t('link.fbLogin')%></a></div> 
+          <div><a href="/forgetpassword"><%= t('link.forgetPassword')%></a></div> 
+        
+      </form> 
+</div> 
+    
+    
+<%- include('.././layout/footer',{footer : ''}); %>
+</body>
+</html>
